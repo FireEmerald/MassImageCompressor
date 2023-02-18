@@ -1,5 +1,5 @@
 # Mass Image Compressor
-_High Quality Batch Image Compression of JPEG, PNG and Raw formats. Originally created by: [yogee_](http://icompressor.blogspot.com/2016/10/introduction-to-hassle-free-image.html)
+_High Quality Batch Image Compression of JPEG, PNG and Raw formats. Originally created by: [yogee](http://icompressor.blogspot.com/2016/10/introduction-to-hassle-free-image.html)_
 
 ## Overview
 Mass Image Compressor is easy to use - a point and shoot batch image compressor and converter tool for Web site optimization, photographers, HTML game creator and casual Windows users.
