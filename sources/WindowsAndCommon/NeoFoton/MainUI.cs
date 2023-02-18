@@ -41,7 +41,7 @@ namespace NeoFoton
                               sizeToReturn = 0;
                           else
                           {
-                              if (cmbKBMB.SelectedItem == "KB")
+                              if (cmbKBMB.SelectedItem.ToString() == "KB")
                                   sizeToReturn = fileSize * 1024;
                               else
                                   sizeToReturn = fileSize * 1024 * 1024;
@@ -54,7 +54,7 @@ namespace NeoFoton
         /// <summary>
         ///  If FixedHeight is false then Height represents % of current height
         /// </summary>
-        public int Height { get; set; }
+        public int ScaleHeight { get; set; }
 
         public string OutputDirPath { get; set; }
 
@@ -68,7 +68,6 @@ namespace NeoFoton
         private int compressedImgWidth;
         private bool checkFileSize = false;
         private decimal fileSize;
-        private string fileSizeUnit = "KB";
         private bool autoUpdate = true;
 
 
@@ -175,7 +174,7 @@ namespace NeoFoton
                 if (FixedHeight)
                     if (!string.IsNullOrEmpty(numTxtHeight.Text) && numTxtHeight.Text.Trim() != "0")
                     {
-                        this.Height = Convert.ToInt32(numTxtHeight.Text);
+                        this.ScaleHeight = Convert.ToInt32(numTxtHeight.Text);
                     }
                     else
                     {
@@ -188,7 +187,7 @@ namespace NeoFoton
                         isViewGood = false;
                     }
                 else
-                    this.Height = trkSize.Value;
+                    this.ScaleHeight = trkSize.Value;
 
                 if (rbPng.Checked)
                     mimeTypeToSave = SupportedMimeType.PNG;
@@ -289,7 +288,7 @@ namespace NeoFoton
                     MessageBox.Show(compressedCout.ToString() + " images compressed in " + (int)(endTime - startTime).TotalSeconds + " seconds.", "Result");
                 });
             }
-            catch (System.Threading.ThreadAbortException ex)
+            catch (System.Threading.ThreadAbortException)
             {
                 this.Invoke((MethodInvoker)delegate
                 {
@@ -602,13 +601,11 @@ namespace NeoFoton
 
         private void MainUI_DragEnter(object sender, DragEventArgs e)
         {
-            DragDropEffects effects = DragDropEffects.None;
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
                 var path = ((string[])e.Data.GetData(DataFormats.FileDrop))[0];
                 if (Directory.Exists(path))
                 {
-                    effects = DragDropEffects.Copy;
                     txtOpen.Text = path;
                     e.Effect = DragDropEffects.Copy;
                 }

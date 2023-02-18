@@ -25,7 +25,7 @@ namespace NeoFotonCommon
 		/// <summary>
 		///  If FixedHeight is false then Height represents % of current height
 		/// </summary>
-		int Height { get; set; }
+		int ScaleHeight { get; set; }
 
         decimal FileSize { get; }
 

@@ -20,7 +20,7 @@ namespace NeoFotonCommon
 							View.QualityCompression,
 							ref message,
 							View.FixedHeight,
-							View.Height,
+							View.ScaleHeight,
                             View.FileSize,
                             View.mimeTypeToSave,
                             previewedImages,
@@ -38,7 +38,7 @@ namespace NeoFotonCommon
                             dirPath,
                             View.QualityCompression,
                             View.FixedHeight,
-                            View.Height,
+                            View.ScaleHeight,
                             View.FileSize,
                             View.mimeTypeToSave,
                             progress);
@@ -48,7 +48,7 @@ namespace NeoFotonCommon
 						View.OutputDirPath,
 						View.QualityCompression,
 						View.FixedHeight,
-						View.Height,
+						View.ScaleHeight,
                         View.FileSize,
                         View.mimeTypeToSave,
                         progress);

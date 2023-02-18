@@ -356,7 +356,7 @@ namespace NeoFotonCommon
                 propItem.Type = 2;
                 bmp.SetPropertyItem(propItem);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //Console.WriteLine("Exception in SetUserComments: " + ex.Message);
             }
