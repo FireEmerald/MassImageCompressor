@@ -670,7 +670,7 @@ namespace NeoFoton
                 opPreviewImages.Clear();
                 zoomLevel = 100;
                 btnPreview_Click(true);
-                txtSave.Text = Path.Combine(txtOpen.Text, "Compressed");
+                txtSave.Text = Path.Combine(txtOpen.Text, "compressed");
             }
             else
             {
