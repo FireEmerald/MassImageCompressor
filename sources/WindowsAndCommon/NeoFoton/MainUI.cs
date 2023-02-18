@@ -656,8 +656,10 @@ namespace NeoFoton
         {
             this.cmbKBMB.DropDownStyle = ComboBoxStyle.DropDownList;
             this.cmbKBMB.SelectedIndex = 1; //select MB.
-            var versionCheckThread = new System.Threading.Thread(() => CheckIfNewVersionAvailable());
-            versionCheckThread.Start();
+
+            // Update version check is not implemented
+            //var versionCheckThread = new System.Threading.Thread(() => CheckIfNewVersionAvailable());
+            //versionCheckThread.Start();
         }
 
         private void txtOpen_TextChanged(object sender, EventArgs e)
