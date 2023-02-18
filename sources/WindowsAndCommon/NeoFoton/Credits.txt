@@ -1,0 +1,10 @@
+﻿Credits:
+
+Mass Image Compressor is benefited by many open source projects such as:
+
+1.	DCRAW: http://www.cybercom.net/~dcoffin/dcraw/
+2.	pngquant.org
+3.	http://optipng.sourceforge.net
+4.  https://sourceforge.net/projects/libjpeg-turbo/
+
+All above software are published with Open Source licenses. 
