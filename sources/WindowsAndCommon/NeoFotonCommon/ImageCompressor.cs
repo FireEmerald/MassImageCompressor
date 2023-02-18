@@ -292,8 +292,8 @@ namespace NeoFotonCommon
                 if (quality > GetQualityIfCompressed(imgCompressed))
                     quality = GetQualityIfCompressed(imgCompressed); //don't save higher qulaity than required.
 
-                SetImageComments(imgCompressed, quality);
-                
+                //SetImageComments(imgCompressed, quality); if set, is shown on various places, which is a bit too annoying
+
                 encoderParameters = new EncoderParameters(1);
                 encoderParameters.Param[0] =
                     new EncoderParameter(Encoder.Quality, quality);
